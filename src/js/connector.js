@@ -6,7 +6,9 @@ window.TrelloPowerUp.initialize({
             .then((card) => {
                 console.log(card);
             })
-            .catch((err) => {});
+            .catch((err) => {
+                console.log(err);
+            });
         return [];
     },
 });
