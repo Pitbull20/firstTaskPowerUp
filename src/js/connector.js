@@ -2,7 +2,11 @@ console.log("Hello world");
 
 window.TrelloPowerUp.initialize({
     "card-badges": (t, ops) => {
-        console.log(t);
+        t.get("card")
+            .then((card) => {
+                console.log(card);
+            })
+            .catch((err) => {});
         return [];
     },
 });
