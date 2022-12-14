@@ -1,0 +1,15 @@
+{
+    "name": "firsttask",
+    "version": "1.0.0",
+    "author": "ultra_pitbull",
+    "license": "MIT",
+    "scripts": {
+        "build": "parcel build src/html/*.html"
+    },
+    "dependencies": {
+        "parcel": "^2.8.0"
+    },
+    "devDependencies": {
+        "parcel-plugin-interpolate-env": "^0.0.1"
+    }
+}
