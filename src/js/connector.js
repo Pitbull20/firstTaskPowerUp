@@ -6,7 +6,7 @@ window.TrelloPowerUp.initialize({
         console.log("------------------------------------------------");
         console.log(t);
         console.log("================================================");
-        t.getAll().then((card) => {
+        t.getAll("card").then((card) => {
             console.log(card);
         });
         return [];
