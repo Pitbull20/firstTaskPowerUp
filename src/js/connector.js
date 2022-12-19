@@ -7,7 +7,11 @@ window.TrelloPowerUp.initialize({
             .get("name")
             .then((card) => {
                 console.log(card);
-                return [];
+                return [
+                    {
+                        text: "Test!!",
+                    },
+                ];
             })
             .catch((err) => {
                 console.log(err);
