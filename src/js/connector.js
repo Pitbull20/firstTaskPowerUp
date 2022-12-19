@@ -1,17 +1,12 @@
 console.log("Hello world");
 
 window.TrelloPowerUp.initialize({
-    "card-badges": (t, ops) => {
+    "card-detail-badges": (t, ops) => {
         return t
-            .card("name")
-            .get("name")
+            .get("all")
             .then((card) => {
                 console.log(card);
-                return [
-                    {
-                        text: "Test!!",
-                    },
-                ];
+                return [];
             })
             .catch((err) => {
                 console.log(err);
