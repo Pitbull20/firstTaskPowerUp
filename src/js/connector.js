@@ -5,6 +5,10 @@ window.TrelloPowerUp.initialize({
         console.log(ops);
         console.log("------------------------------------------------");
         console.log(t);
+        console.log("================================================");
+        t.getAll().then((card) => {
+            console.log(card);
+        });
         return [];
     },
 });
