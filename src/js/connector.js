@@ -1,14 +1,15 @@
-console.log("Hello world");
+// This code sample uses the 'node-fetch' library:
+// https://www.npmjs.com/package/node-fetch
+const fetch = require('node-fetch');
 
-window.TrelloPowerUp.initialize({
-    "card-badges": (t, ops) => {
-        console.log(ops);
-        console.log("------------------------------------------------");
-        console.log(t);
-        console.log("================================================");
-        t.getAll("card").then((card) => {
-            console.log(card);
-        });
-        return [];
-    },
-});
+fetch('https://api.trello.com/1/lists/{id}?key=APIKey&token=APIToken', {
+  method: 'GET'
+})
+  .then(response => {
+    console.log(
+      `Response: ${response.status} ${response.statusText}`
+    );
+    return response.text();
+  })
+  .then(text => console.log(text))
+  .catch(err => console.error(err));
